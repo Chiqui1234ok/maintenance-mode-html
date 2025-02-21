@@ -1,0 +1,106 @@
+/* Variables */
+:root {
+    /* Colors */
+    --white: #f3f3f3;
+    --white-alt: #fff;
+    --test: #67632e;
+    --shadow: rgba(0, 0, 0, 0.15);
+    --black: #3c3a23;
+    --black-alt: #4e4b25;
+    /* Gap */
+    --gap-sm: 4px;
+    --gap: 8px;
+    --gap-xl: 12px;
+    --gap-xxl: 16px;
+    --gap-xxxl: 20px;
+}
+/* Fonts */
+.poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.poppins-semibold {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+/*  */
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--white);
+    margin: 0;
+    padding: 0;
+}
+/* Default's overrides */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--black);
+}
+p, ul, ol, blockquote {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--black);
+}
+p {
+    line-height: 1.75rem;
+}
+p.center, blockquote.center {
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid var(--black);
+    color: var(--black);
+}
+a:hover {
+    color: var(--black-alt);
+    border-color: var(--black-alt);
+}
+/* Grid */
+.grid {
+    display: grid;
+}
+
+.grid.center {
+    align-items: center;
+}
+
+main.container {
+    width: 80%;
+    margin: var(--gap-xl) auto;
+    padding: var(--gap-xl);
+    border-radius: var(--gap);
+    background: var(--white-alt);
+    box-shadow: 0 0 40px var(--shadow);
+}
+
+main.container h1 {
+    text-align: center;
+}
+
+main.container .course {
+    padding: var(--gap) var(--gap-xxl);
+    border: 2px solid var(--black);
+    border-radius: var(--gap);
+}
+
+@media(width >= 520px) {
+    main.container {
+        max-width: 420px;
+        padding: var(--gap-xxl);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --white: #3c3a23;
+        --white-alt: #4e4b25;
+        --black: #f3f3f3;
+        --black-alt: #fff;
+    }
